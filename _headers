@@ -1,0 +1,15 @@
+# Allow any origin to embed Wicko Skills assets — that's the whole point
+/brand/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=86400, s-maxage=604800
+
+/skills/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=86400, s-maxage=604800
+
+# CSS + JS get explicit content types (Pages handles this, but be explicit)
+/*.css
+  Content-Type: text/css; charset=utf-8
+
+/*.js
+  Content-Type: application/javascript; charset=utf-8

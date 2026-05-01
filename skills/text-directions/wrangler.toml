@@ -1,0 +1,14 @@
+name = "wicko-text-directions"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+[vars]
+# Comma-separated list of allowed origins. Empty = allow all.
+ALLOWED_ORIGINS = ""
+# Optional brand suffix appended to the SMS body.
+BRAND_SUFFIX = " — sent via Wicko Waypoint"
+
+# Set secrets with:
+#   wrangler secret put TWILIO_ACCOUNT_SID
+#   wrangler secret put TWILIO_AUTH_TOKEN
+#   wrangler secret put TWILIO_FROM

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wicko Text Directions — Example</title>
+
+<link rel="stylesheet" href="../../brand/wicko-tokens.css">
+<link rel="stylesheet" href="text-directions.css">
+
+<style>
+  body {
+    font-family: var(--w-font-body);
+    background: var(--w-cream);
+    color: var(--w-ink);
+    margin: 0;
+    padding: 60px 20px 80px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 600px; margin: 0 auto; }
+  h1 {
+    font-family: var(--w-font-display);
+    font-weight: 400;
+    font-size: 36px;
+    margin: 0 0 8px;
+  }
+  .lede {
+    color: var(--w-ink-soft);
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0 0 40px;
+  }
+  .card {
+    background: #fff;
+    border-radius: var(--w-radius-card);
+    border: 1px solid var(--w-border);
+    box-shadow: 0 4px 18px var(--w-shadow);
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+  .eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--w-ink-soft);
+    margin: 0 0 6px;
+  }
+  .card h3 {
+    font-family: var(--w-font-display);
+    font-weight: 400;
+    font-size: 22px;
+    margin: 0 0 4px;
+  }
+  .when, .where {
+    color: var(--w-ink-soft);
+    font-size: 14px;
+    margin: 2px 0;
+    line-height: 1.5;
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+  }
+  .actions a.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--w-accent);
+    color: var(--w-on-accent);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    padding: 10px 18px;
+    border-radius: var(--w-radius-button);
+    box-shadow: 0 4px 14px var(--w-accent-soft);
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Service Schedule</h1>
+    <p class="lede">Reference example showing the Wicko Text Directions skill in context — the same pattern Tukios uses on funeral mortuary obituary pages, retooled for the Wicko ecosystem.</p>
+
+    <article class="card">
+      <p class="eyebrow">Visitation</p>
+      <h3>Lindquist's Syracuse Mortuary</h3>
+      <p class="when">Thursday, March 19, 2026 · 6:00–8:00 pm</p>
+      <p class="where">869 S 2000 W, Syracuse, UT 84075</p>
+      <div class="actions">
+        <a class="btn-primary" href="https://www.google.com/maps/place/869+S+2000+W+Syracuse+UT+84075" target="_blank" rel="noopener">Get Directions</a>
+        <wicko-text-directions
+          address="869 S 2000 W, Syracuse, UT 84075"
+          worker="https://wicko-text-directions.example.workers.dev"
+          brand
+        ></wicko-text-directions>
+      </div>
+    </article>
+
+    <article class="card">
+      <p class="eyebrow">Funeral Service</p>
+      <h3>Lindquist's Syracuse Mortuary</h3>
+      <p class="when">Friday, March 20, 2026 · 11:00 am</p>
+      <p class="where">869 S 2000 W, Syracuse, UT 84075</p>
+      <div class="actions">
+        <a class="btn-primary" href="https://www.google.com/maps/place/869+S+2000+W+Syracuse+UT+84075" target="_blank" rel="noopener">Get Directions</a>
+        <wicko-text-directions
+          address="869 S 2000 W, Syracuse, UT 84075"
+          worker="https://wicko-text-directions.example.workers.dev"
+          brand
+        ></wicko-text-directions>
+      </div>
+    </article>
+  </div>
+
+  <script src="text-directions.js" defer></script>
+</body>
+</html>

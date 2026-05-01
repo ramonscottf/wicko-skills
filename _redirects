@@ -1,0 +1,14 @@
+# Wicko Skills — site routing
+# /docs is the public-facing landing page, but we expose
+# /brand and /skills directly so the CDN drop-ins work:
+#   skills.wickowaypoint.com/brand/wicko-tokens.css
+#   skills.wickowaypoint.com/skills/text-directions/text-directions.js
+
+# Default: serve docs/index.html at root
+/                /docs/index.html       200
+
+# Pretty paths
+/skills          /docs/index.html#skills 200
+
+# Everything in /brand and /skills serves as-is (no redirect needed)
+# but we set explicit MIME-friendly headers via _headers below.
