@@ -5,24 +5,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Wicko Text Directions — Example</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="../../brand/wicko-tokens.css">
+<link rel="stylesheet" href="../../brand/wicko-pill-nav.css">
 <link rel="stylesheet" href="text-directions.css">
 
 <style>
+  * { box-sizing: border-box; }
   body {
     font-family: var(--w-font-body);
     background: var(--w-cream);
     color: var(--w-ink);
     margin: 0;
-    padding: 60px 20px 80px;
+    padding: 130px 20px 80px;
     -webkit-font-smoothing: antialiased;
   }
   .wrap { max-width: 600px; margin: 0 auto; }
   h1 {
     font-family: var(--w-font-display);
-    font-weight: 400;
-    font-size: 36px;
+    font-weight: 500;
+    font-size: 40px;
     margin: 0 0 8px;
+    letter-spacing: -.3px;
   }
   .lede {
     color: var(--w-ink-soft);
@@ -81,41 +88,97 @@
 </style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>Service Schedule</h1>
-    <p class="lede">Reference example showing the Wicko Text Directions skill in context — the same pattern Tukios uses on funeral mortuary obituary pages, retooled for the Wicko ecosystem.</p>
 
-    <article class="card">
-      <p class="eyebrow">Visitation</p>
-      <h3>Lindquist's Syracuse Mortuary</h3>
-      <p class="when">Thursday, March 19, 2026 · 6:00–8:00 pm</p>
-      <p class="where">869 S 2000 W, Syracuse, UT 84075</p>
-      <div class="actions">
-        <a class="btn-primary" href="https://www.google.com/maps/place/869+S+2000+W+Syracuse+UT+84075" target="_blank" rel="noopener">Get Directions</a>
-        <wicko-text-directions
-          address="869 S 2000 W, Syracuse, UT 84075"
-          worker="https://wicko-text-directions.example.workers.dev"
-          brand
-        ></wicko-text-directions>
-      </div>
-    </article>
+<!-- Wicko signature pill nav -->
+<nav class="wpn" aria-label="Wicko Skills">
+  <div class="wpn__inner">
+    <a class="wpn__brand" href="/">
+      <span class="wpn__brand-icon" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="36" height="36" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="36" height="36" rx="10" fill="#d9514b"/>
+          <text x="20" y="27" font-family="Playfair Display, Georgia, serif" font-weight="600" font-size="22" fill="#fdf6ec" text-anchor="middle">W</text>
+        </svg>
+      </span>
+      <span style="font-family: var(--w-font-display); font-size: 18px; letter-spacing: .3px;">Wicko Skills</span>
+    </a>
 
-    <article class="card">
-      <p class="eyebrow">Funeral Service</p>
-      <h3>Lindquist's Syracuse Mortuary</h3>
-      <p class="when">Friday, March 20, 2026 · 11:00 am</p>
-      <p class="where">869 S 2000 W, Syracuse, UT 84075</p>
-      <div class="actions">
-        <a class="btn-primary" href="https://www.google.com/maps/place/869+S+2000+W+Syracuse+UT+84075" target="_blank" rel="noopener">Get Directions</a>
-        <wicko-text-directions
-          address="869 S 2000 W, Syracuse, UT 84075"
-          worker="https://wicko-text-directions.example.workers.dev"
-          brand
-        ></wicko-text-directions>
-      </div>
-    </article>
+    <button class="wpn__toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="wpn__links">
+      <li><a href="/#skills">Skills</a></li>
+      <li><a href="https://github.com/ramonscottf/wicko-skills" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://wickowaypoint.com" target="_blank" rel="noopener">Wicko Waypoint</a></li>
+      <li><a class="wpn__cta" href="mailto:hello@wickowaypoint.com">Hire Us</a></li>
+    </ul>
   </div>
+</nav>
 
-  <script src="text-directions.js" defer></script>
+<div class="wrap">
+  <p class="eyebrow">Skill · Text Directions</p>
+  <h1>Service Schedule</h1>
+  <p class="lede">Reference example showing the Wicko Text Directions skill in context — the same pattern Tukios uses on funeral mortuary obituary pages, retooled for the Wicko ecosystem.</p>
+
+  <article class="card">
+    <p class="eyebrow">Visitation</p>
+    <h3>Lindquist's Syracuse Mortuary</h3>
+    <p class="when">Thursday, March 19, 2026 · 6:00–8:00 pm</p>
+    <p class="where">869 S 2000 W, Syracuse, UT 84075</p>
+    <div class="actions">
+      <a class="btn-primary" href="https://www.google.com/maps/place/869+S+2000+W+Syracuse+UT+84075" target="_blank" rel="noopener">Get Directions</a>
+      <wicko-text-directions
+        address="869 S 2000 W, Syracuse, UT 84075"
+        worker="https://wicko-text-directions.example.workers.dev"
+        brand
+      ></wicko-text-directions>
+    </div>
+  </article>
+
+  <article class="card">
+    <p class="eyebrow">Funeral Service</p>
+    <h3>Lindquist's Syracuse Mortuary</h3>
+    <p class="when">Friday, March 20, 2026 · 11:00 am</p>
+    <p class="where">869 S 2000 W, Syracuse, UT 84075</p>
+    <div class="actions">
+      <a class="btn-primary" href="https://www.google.com/maps/place/869+S+2000+W+Syracuse+UT+84075" target="_blank" rel="noopener">Get Directions</a>
+      <wicko-text-directions
+        address="869 S 2000 W, Syracuse, UT 84075"
+        worker="https://wicko-text-directions.example.workers.dev"
+        brand
+      ></wicko-text-directions>
+    </div>
+  </article>
+</div>
+
+<script src="text-directions.js" defer></script>
+<script>
+  // Pill nav scroll + mobile toggle
+  const nav = document.querySelector('.wpn');
+  const onScroll = () => {
+    if (window.scrollY > 20) nav.classList.add('is-scrolled');
+    else nav.classList.remove('is-scrolled');
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  const toggle = nav.querySelector('.wpn__toggle');
+  const links  = nav.querySelector('.wpn__links');
+  toggle.addEventListener('click', () => {
+    const open = toggle.classList.toggle('is-open');
+    links.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+  links.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        toggle.classList.remove('is-open');
+        links.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
